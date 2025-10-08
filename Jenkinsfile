@@ -1,12 +1,12 @@
 pipeline {
   agent any
   environment {
-    DOCKER_REGISTRY = 'your-dockerhub-username'
+    DOCKER_REGISTRY = 'nisha8112'
   }
   stages {
     stage('Checkout Source') {
       steps {
-        git url: 'your-git-repo-url', branch: 'main'
+        git url: 'https://github.com/bharti-nishakumari/my-nodejs-app.git', branch: 'main'
       }
     }
     stage('Build & Push Docker Images') {
