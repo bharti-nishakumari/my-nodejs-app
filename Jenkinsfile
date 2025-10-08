@@ -18,7 +18,7 @@ pipeline {
             bat "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
             bat "docker-compose build web"
             def imageTag = "${DOCKER_REGISTRY}/my-nodejs-app:${env.BUILD_NUMBER}"
-            bat "docker tag my-nodejs-app:latest ${imageTag}"
+            bat "docker tag my-nodejs-app:${env.BUILD_NUMBER} ${imageTag}"
             bat "docker push ${imageTag}"
           }
         }
