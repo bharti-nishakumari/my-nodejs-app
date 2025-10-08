@@ -1,0 +1,13 @@
+{
+  "name": "multi-container-node-app",
+  "version": "1.0.0",
+  "description": "Node.js app with Docker and Jenkins",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0"
+  }
+}
