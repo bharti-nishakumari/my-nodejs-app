@@ -2,10 +2,8 @@ version: '3.8'
 
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: my-nodejs-app:${BUILD_NUMBER}
+    build: .
+    image: my-nodejs-app:latest
     container_name: node-web
     restart: always
     ports:
